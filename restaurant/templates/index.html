@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section id="hero">
+    <div>
+      <h1>Special Weekend Offer</h1>
+      <p>Enjoy 30% off your favorite Mediterranean dishes this weekend. Fresh ingredients, warm hospitality, and bright flavors await.</p>
+      <div class="hero-actions">
+        <a href="{% url 'book' %}" class="cta">Book a table</a>
+        <a href="{% url 'menu' %}" class="button secondary">View menu</a>
+      </div>
+    </div>
+</section>
+
+<section class="article-grid">
+    <article class="card">
+      <h2>Our New Menu</h2>
+      <img src="{% static 'img/grill.jpg' %}" alt="Grilled dish" />
+      <p>Our menu features 12-15 seasonal dishes inspired by Italian, Greek, and Turkish traditions.</p>
+      <a href="{% url 'menu' %}">Explore the menu</a>
+    </article>
+
+    <article class="card">
+      <h2>Book a Table</h2>
+      <img src="{% static 'img/salad.jpg' %}" alt="Salad" />
+      <p>Reserve your seat and enjoy a relaxed Mediterranean dining experience in a cozy Chicago setting.</p>
+      <a href="{% url 'book' %}">Reserve now</a>
+    </article>
+
+    <article class="card">
+      <h2>Opening Hours</h2>
+      <img src="{% static 'img/head_chef.jpg' %}" alt="Chef" />
+      <p>We are open seven days a week. Come by for lunch, dinner, or a special weekend celebration.</p>
+      <ul>
+        <li>Mon - Fri: 2pm - 10pm</li>
+        <li>Sat: 2pm - 11pm</li>
+        <li>Sun: 2pm - 9pm</li>
+      </ul>
+    </article>
+</section>
+{% endblock %}

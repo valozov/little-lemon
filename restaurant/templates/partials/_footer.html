@@ -1,0 +1,24 @@
+    {% load static %}
+
+    <footer class="site-footer">
+    <div class="container footer-inner">
+        <div>
+        <img src="{% static 'img/logo.png' %}" alt="Little Lemon logo" />
+        <p class="text-muted">Mediterranean flavors in Chicago with a modern twist.</p>
+        </div>
+        <div>
+        <h3>Explore</h3>
+        <nav>
+            <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'menu' %}">Menu</a></li>
+            <li><a href="{% url 'book' %}">Book</a></li>
+            </ul>
+        </nav>
+        </div>  
+        <div>
+        <p>© 2026 Little Lemon. Reservations, seasonal specials, and friendly service.</p>
+        </div>
+    </div>
+    </footer>

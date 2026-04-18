@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+{% block content %}
+<section class="card">
+  <h1>Menu</h1>
+  <p class="text-muted">Seasonal specials and Mediterranean favorites, selected for today’s dining experience.</p>
+</section>
+
+<section class="menu-grid">
+    {% for item in menu %}
+    <article class="card">
+      <h2><a href="{% url 'menu_item' pk=item.pk %}">{{ item.name }}</a></h2>
+      <p class="menu-price">{{ item.price }}</p>
+      <p>{{ item.description|default:'A delicious choice from our kitchen.' }}</p>
+    </article>
+    {% endfor %}
+</section>
+{% endblock %}
